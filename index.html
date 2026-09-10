@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>棍之勇者成名录-动漫剧情介绍与角色设定百科</title>
+    <meta name="description" content="棍之勇者成名录动漫百科，详细介绍作品背景、主要角色、剧情走向、能力设定与相关资讯，为喜欢这部作品的观众提供全面的内容整理与解读。">
+    <meta name="keywords" content="棍之勇者成名录,棍之勇者,动漫,轻小说,角色介绍,剧情,设定,异世界">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
+            background-color: #f5f2ea;
+            color: #2c2c2c;
+            line-height: 1.7;
+        }
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        .site-header {
+            background: #1a1a1a;
+            padding: 15px 0;
+            border-bottom: 3px solid #b3542e;
+        }
+        .site-header .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+        .logo-icon {
+            font-size: 32px;
+            margin-right: 10px;
+        }
+        .site-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #f0e6d2;
+            letter-spacing: 1px;
+        }
+        .site-title span {
+            color: #d47a4a;
+        }
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .main-nav a {
+            color: #cfc5b2;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .main-nav a:hover {
+            background: #333;
+            color: #fff;
+        }
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #222 0%, #3a2e24 80%);
+            padding: 60px 0;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #b3542e;
+        }
+        .hero .wrapper {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .hero-text {
+            flex: 1 1 400px;
+        }
+        .hero-text h1 {
+            font-size: 42px;
+            color: #f0e6d2;
+            margin-bottom: 10px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+        .hero-text .tagline {
+            font-size: 18px;
+            color: #d9c6a8;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        .hero-text p {
+            color: #b5aa98;
+            font-size: 16px;
+            max-width: 600px;
+        }
+        .hero-badge {
+            background: rgba(179,84,46,0.3);
+            border: 1px solid #b3542e;
+            padding: 20px 25px;
+            border-radius: 8px;
+            color: #e8d5b5;
+            font-size: 14px;
+            flex: 0 1 300px;
+        }
+        .hero-badge strong {
+            display: block;
+            font-size: 18px;
+            color: #f0a878;
+            margin-bottom: 5px;
+        }
+        /* Section 通用 */
+        .section {
+            margin-bottom: 50px;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c2c2c;
+            border-left: 6px solid #b3542e;
+            padding-left: 16px;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+        .section-sub {
+            font-size: 15px;
+            color: #777;
+            margin-top: -15px;
+            margin-bottom: 20px;
+            padding-left: 22px;
+        }
+        /* 卡片组 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 24px 20px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+            border-top: 4px solid #b3542e;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #333;
+        }
+        .card p {
+            font-size: 15px;
+            color: #555;
+        }
+        /* 角色列表 */
+        .char-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .char-item {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            gap: 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .char-avatar {
+            width: 70px;
+            height: 70px;
+            background: #3a2e24;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #d47a4a;
+            flex-shrink: 0;
+        }
+        .char-info h4 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 6px;
+        }
+        .char-info .role {
+            font-size: 13px;
+            color: #b3542e;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .char-info p {
+            font-size: 14px;
+            color: #666;
+        }
+        /* 剧情时间线 */
+        .timeline {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .timeline-item {
+            display: flex;
+            gap: 20px;
+            padding: 16px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+        .timeline-num {
+            font-size: 24px;
+            font-weight: 700;
+            color: #b3542e;
+            min-width: 50px;
+            text-align: center;
+        }
+        .timeline-content h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .timeline-content p {
+            color: #666;
+            font-size: 15px;
+        }
+        /* 资讯列表 */
+        .news-list {
+            background: #fff;
+            border-radius: 10px;
+            padding: 10px 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .news-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #f0ece3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+        .news-item a:hover {
+            color: #b3542e;
+        }
+        .news-date {
+            color: #999;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        /* FAQ */
+        .faq-list {
+            max-width: 900px;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 20px 25px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+        .faq-question {
+            font-weight: 700;
+            font-size: 17px;
+            color: #333;
+            margin-bottom: 8px;
+            cursor: pointer;
+            position: relative;
+        }
+        .faq-question::before {
+            content: "Q. ";
+            color: #b3542e;
+            font-weight: 800;
+        }
+        .faq-answer {
+            color: #555;
+            font-size: 15px;
+            padding-left: 16px;
+            border-left: 3px solid #eee;
+            margin-top: 8px;
+        }
+        /* 页脚 */
+        .site-footer {
+            background: #1a1a1a;
+            color: #8a857e;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-col {
+            flex: 1 1 200px;
+        }
+        .footer-col h4 {
+            color: #cfc5b2;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col li {
+            margin-bottom: 8px;
+        }
+        .footer-col a {
+            color: #8a857e;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .footer-col a:hover {
+            color: #d47a4a;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 14px;
+            color: #6b665f;
+        }
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .site-header .wrapper {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            .main-nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+            .hero-text h1 {
+                font-size: 32px;
+            }
+            .hero .wrapper {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text p {
+                margin: 0 auto;
+            }
+            .hero-badge {
+                flex: 1 1 auto;
+                width: 100%;
+                text-align: left;
+            }
+            .section-title {
+                font-size: 24px;
+            }
+            .char-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .timeline-item {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+            .timeline-num {
+                min-width: auto;
+            }
+        }
+        @media (max-width: 480px) {
+            .wrapper {
+                padding: 0 12px;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-text h1 {
+                font-size: 28px;
+            }
+            .news-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrapper">
+            <div class="logo-area">
+                <span class="logo-icon">🛡️</span>
+                <span class="site-title">棍之勇者<span>成名录</span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#overview">作品简介</a></li>
+                    <li><a href="#characters">角色一览</a></li>
+                    <li><a href="#plot">剧情走向</a></li>
+                    <li><a href="#news">资讯动态</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="wrapper">
+            <div class="hero-text">
+                <h1>棍之勇者成名录</h1>
+                <div class="tagline">异世界冒险 · 逆袭成长 · 热血战斗</div>
+                <p>一部围绕"棍之勇者"展开的异世界奇幻作品，讲述了少年在异世界中以独特武器与身份，在冒险与挑战中不断成长的故事。作品以鲜明的角色塑造和别具一格的能力设定吸引了大量观众。</p>
+            </div>
+            <div class="hero-badge">
+                <strong>作品关键词</strong>
+                异世界召唤 · 勇者小队 · 棍术战斗<br>
+                成长逆袭 · 伙伴羁绊 · 魔物讨伐
+            </div>
+        </div>
+    </section>
+
+    <main class="wrapper">
+        <!-- 作品信息概览 -->
+        <section class="section" id="overview">
+            <h2 class="section-title">作品背景与世界观</h2>
+            <p class="section-sub">了解棍之勇者成名录的基础设定与故事舞台</p>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>📖 故事起源</h3>
+                    <p>故事始于一名普通少年被召唤至异世界，成为传说中的"勇者"之一。然而与其他勇者不同，他获得的武器是看似平凡的木棍。面对嘲笑与质疑，他选择用自己的方式证明勇者的价值。</p>
+                </div>
+                <div class="card">
+                    <h3>🌍 异世界舞台</h3>
+                    <p>作品构建了一个包含多个种族、王国与迷宫的世界体系。从边境村庄到王都，从地下城到魔族领地，主角的旅程逐步揭开世界的真相，也让"棍之勇者"的名号逐渐响亮。</p>
+                </div>
+                <div class="card">
+                    <h3>⚔️ 独特战斗风格</h3>
+                    <p>棍作为武器在同类作品中较为少见。作品通过技能成长、属性解放和战术运用，塑造了一套以棍术为核心、兼具速度与技巧的战斗风格，为观众带来新鲜感。</p>
+                </div>
+                <div class="card">
+                    <h3>👥 成长主题</h3>
+                    <p>表面上是冒险故事，内核却聚焦于"不被认可之人如何找到自我价值"。主角从边缘角色逐步成为团队中不可或缺的力量，这种成长弧光正是作品的情感核心。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 主要角色 -->
+        <section class="section" id="characters">
+            <h2 class="section-title">主要角色设定</h2>
+            <p class="section-sub">棍之勇者成名录中值得关注的角色们</p>
+            <div class="char-list">
+                <div class="char-item">
+                    <div class="char-avatar">🪄</div>
+                    <div class="char-info">
+                        <h4>凯尔·罗德</h4>
+                        <div class="role">棍之勇者 / 主角</div>
+                        <p>被召唤到异世界的少年。性格坚韧，起初因武器是"棍"而备受轻视，但他凭借努力与智慧，逐渐开发出棍术的多种可能性，并赢得了同伴的信任。</p>
+                    </div>
+                </div>
+                <div class="char-item">
+                    <div class="char-avatar">🗡️</div>
+                    <div class="char-info">
+                        <h4>莉安娜</h4>
+                        <div class="role">剑之勇者</div>
+                        <p>出身骑士家族的天才剑士，对自己的剑术极为自信。最初对凯尔的能力抱有怀疑，但在共同战斗中逐渐认可他的实力与品格。</p>
+                    </div>
+                </div>
+                <div class="char-item">
+                    <div class="char-avatar">📖</div>
+                    <div class="char-info">
+                        <h4>米拉</h4>
+                        <div class="role">魔法勇者</div>
+                        <p>来自魔法学院的优等生，拥有强大的魔法天赋。性格冷静理性，擅长分析战局，是队伍中的智囊型角色，与凯尔之间有着微妙的默契。</p>
+                    </div>
+                </div>
+                <div class="char-item">
+                    <div class="char-avatar">🛡️</div>
+                    <div class="char-info">
+                        <h4>格伦</h4>
+                        <div class="role">盾之勇者</div>
+                        <p>体格壮硕的守护者，拥有极强的防御能力。性格豪爽重情义，是队伍中的可靠大哥。他与凯尔之间的友情是故事的重要支线。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 剧情发展 -->
+        <section class="section" id="plot">
+            <h2 class="section-title">剧情阶段梳理</h2>
+            <p class="section-sub">按故事推进顺序整理的剧情脉络</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-num">01</div>
+                    <div class="timeline-content">
+                        <h4>召唤与质疑</h4>
+                        <p>主角凯尔与其他三位勇者一同被召唤至异世界。当众人分别获得剑、魔法、盾的加护时，凯尔得到的却是"棍"。在王国欢迎仪式上，他遭到了明显的冷遇与质疑。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-num">02</div>
+                    <div class="timeline-content">
+                        <h4>初次讨伐</h4>
+                        <p>为了证明自己，凯尔主动申请参与边境的魔物讨伐任务。面对队友的保留态度，他用灵活的棍术和冷静的判断在战斗中打出关键一击，初步扭转了他人对他的印象。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-num">03</div>
+                    <div class="timeline-content">
+                        <h4>迷宫探索</h4>
+                        <p>勇者小队进入古代迷宫寻找神器。迷宫内部机关重重，凯尔凭借棍的"感知"能力多次发现隐藏通道，帮助团队避开陷阱。他的价值逐渐被认可。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-num">04</div>
+                    <div class="timeline-content">
+                        <h4>王都阴谋</h4>
+                        <p>王国高层中出现叛徒，试图利用勇者之间的矛盾削弱整体战力。凯尔察觉到异常，在各方势力间周旋，最终揭露了阴谋，但也因此卷入更大的政治漩涡。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-num">05</div>
+                    <div class="timeline-content">
+                        <h4>棍之觉醒</h4>
+                        <p>在与魔将的对决中，凯尔面临前所未有的危机。在绝境中，他领悟了棍之奥义，解锁了隐藏能力"千变棍法"，以惊人的表现击败强敌，"棍之勇者"之名开始响彻大陆。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 能力设定专题 -->
+        <section class="section">
+            <h2 class="section-title">棍术能力体系</h2>
+            <p class="section-sub">棍之勇者所掌握的独特技能与成长路线</p>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>基础棍术</h3>
+                    <p>包括扫击、突刺、格挡等基础动作。看似简单，但在凯尔的运用下灵活多变，配合步伐移动可以在近身战中取得优势。</p>
+                </div>
+                <div class="card">
+                    <h3>属性附加</h3>
+                    <p>通过消耗魔力为棍身附加火、雷、风等属性效果，增加攻击的破坏力与特殊效果，是应对不同魔物的重要手段。</p>
+                </div>
+                <div class="card">
+                    <h3>千变棍法</h3>
+                    <p>觉醒后的高阶能力，能够在战斗中瞬间改变棍的形态与长度，甚至分裂为多段，实现攻防一体的效果，是凯尔的招牌技能。</p>
+                </div>
+                <div class="card">
+                    <h3>协同战术</h3>
+                    <p>凯尔擅长观察队友的战斗方式，利用棍的牵制与佯攻为同伴创造输出空间，体现出他作为团队核心的战术价值。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 资讯动态 -->
+        <section class="section" id="news">
+            <h2 class="section-title">相关资讯与动态</h2>
+            <p class="section-sub">关于棍之勇者成名录的最新消息汇总</p>
+            <div class="news-list">
+                <div class="news-item">
+                    <a href="#">棍之勇者成名录 动画化企划公开，制作公司信息待公布</a>
+                    <span class="news-date">2025-03-15</span>
+                </div>
+                <div class="news-item">
+                    <a href="#">原作轻小说第12卷发售决定，封面及特典公开</a>
+                    <span class="news-date">2025-02-28</span>
+                </div>
+                <div class="news-item">
+                    <a href="#">官方宣布将举办角色人气投票，获胜角色将获得专属短篇</a>
+                    <span class="news-date">2025-02-10</span>
+                </div>
+                <div class="news-item">
+                    <a href="#">漫画版连载突破50话，单行本第8卷好评发售中</a>
+                    <span class="news-date">2025-01-22</span>
+                </div>
+                <div class="news-item">
+                    <a href="#">广播剧企划启动，声优阵容将于近期公布</a>
+                    <span class="news-date">2025-01-05</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="faq">
+            <h2 class="section-title">常见问题解答</h2>
+            <p class="section-sub">关于作品与设定的一些高频疑问</p>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">棍之勇者成名录的原作是什么形式？</div>
+                    <div class="faq-answer">作品最初以轻小说形式连载，后来陆续推出了漫画改编版。不同版本在细节上略有差异，但核心剧情与角色设定保持一致。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">主角的"棍"和其他勇者的武器相比有什么优势？</div>
+                    <div class="faq-answer">棍的优势在于灵活性与适应性。它不像剑那样依赖锋利度，也不像魔法那样消耗大量魔力。棍术强调巧劲与速度，在面对多种类型敌人时都有应对手段。后期通过觉醒能力，棍的潜力得到进一步开发。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">这部作品与其他异世界题材有什么不同之处？</div>
+                    <div class="faq-answer">最大的不同在于对"弱势武器"的刻画。作品没有一开始就给主角强大的外挂，而是通过努力、战术和成长来展现角色的价值。同时，团队中各勇者的磨合与成长也是一大看点，而不是单纯的主角碾压。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">故事中是否有黑暗或沉重的剧情？</div>
+                    <div class="faq-answer">作品整体基调偏向热血成长，但确实包含一些政治斗争、背叛与牺牲的情节。这些内容为故事增加了深度，但并不是刻意为之的黑暗风格，而是服务于角色塑造与世界观展开。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">适合什么类型的观众观看？</div>
+                    <div class="faq-answer">如果你喜欢异世界冒险、团队成长、逆袭类故事，或者对冷门武器战斗感兴趣，这部作品应该会比较合口味。同时，作品对角色的心理描写较为细致，也适合喜欢人物塑造的观众。</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 相关推荐 -->
+        <section class="section">
+            <h2 class="section-title">你可能还会喜欢</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>盾之勇者成名录</h3>
+                    <p>同样以"不被看好的勇者"为主题的经典作品，讲述了盾之勇者在异世界从零开始建立信任的故事。</p>
+                </div>
+                <div class="card">
+                    <h3>关于我转生变成史莱姆这档事</h3>
+                    <p>转生异世界题材的代表作，主角以史莱姆之身逐步建立起自己的国度，充满轻松与热血的冒险。</p>
+                </div>
+                <div class="card">
+                    <h3>平凡职业造就世界最强</h3>
+                    <p>从最弱职业逆袭成为世界最强，同样是异世界冒险与能力成长并重的作品，战斗场面酣畅淋漓。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于作品</h4>
+                    <ul>
+                        <li><a href="#">原作轻小说</a></li>
+                        <li><a href="#">漫画连载</a></li>
+                        <li><a href="#">动画情报</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>内容导航</h4>
+                    <ul>
+                        <li><a href="#overview">作品背景</a></li>
+                        <li><a href="#characters">角色介绍</a></li>
+                        <li><a href="#plot">剧情梳理</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>站点信息</h4>
+                    <ul>
+                        <li><a href="#">关于本站</a></li>
+                        <li><a href="#">投稿合作</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>本站为爱好者整理的资料站，内容基于公开信息编写，如有疏漏欢迎指正。</p>
+                <p>© 2025 棍之勇者成名录 爱好者资料站</p>
+            </div>
+        </div>
+    </footer>
+</body>
+                  </html>
