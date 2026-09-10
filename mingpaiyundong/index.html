@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名牌运动鞋-热门品牌推荐与选购指南</title>
+    <meta name="description" content="探索名牌运动鞋的世界，了解耐克、阿迪达斯、李宁等热门品牌的新品、经典款式与选购建议，助你找到最适合自己的那一双。">
+    <meta name="keywords" content="名牌运动鞋,运动鞋推荐,耐克,阿迪达斯,李宁,跑鞋,篮球鞋,选购指南">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f7f7f9;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* header */
+        .site-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e5ea;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #111;
+        }
+        .logo span {
+            color: #b6002e;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 32px;
+        }
+        .main-nav a {
+            font-size: 15px;
+            font-weight: 500;
+            color: #333;
+            transition: color 0.2s;
+        }
+        .main-nav a:hover {
+            color: #b6002e;
+        }
+        .header-search {
+            display: flex;
+            align-items: center;
+            background: #f2f2f7;
+            border-radius: 20px;
+            padding: 6px 16px;
+            width: 220px;
+        }
+        .header-search input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 14px;
+            width: 100%;
+        }
+        .header-search svg {
+            width: 16px;
+            height: 16px;
+            fill: #8e8e93;
+            margin-right: 6px;
+        }
+        /* hero */
+        .hero {
+            background: linear-gradient(135deg, #1c1c1e 0%, #3a3a3c 100%);
+            color: #fff;
+            padding: 70px 0 80px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            right: -80px;
+            top: -80px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(182,0,46,0.4) 0%, transparent 70%);
+        }
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-copy h1 {
+            font-size: 44px;
+            line-height: 1.2;
+            font-weight: 800;
+            margin-bottom: 18px;
+            letter-spacing: -0.5px;
+        }
+        .hero-copy h1 span {
+            color: #ff4d6d;
+        }
+        .hero-copy p {
+            font-size: 18px;
+            color: #d1d1d6;
+            margin-bottom: 28px;
+            max-width: 540px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: #b6002e;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s, transform 0.1s;
+            display: inline-block;
+        }
+        .btn-primary:hover {
+            background: #d40036;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            border: 2px solid rgba(255,255,255,0.6);
+            color: white;
+            padding: 10px 26px;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.2s;
+        }
+        .btn-outline:hover {
+            border-color: white;
+            background: rgba(255,255,255,0.1);
+        }
+        .hero-visual {
+            background: rgba(255,255,255,0.05);
+            border-radius: 24px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .hero-sneaker-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .mini-card {
+            background: rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 16px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .mini-card .shoe-icon {
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+        .mini-card p {
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .mini-card span {
+            font-size: 12px;
+            color: #a5a5af;
+        }
+        /* section general */
+        .section {
+            padding: 40px 0 60px;
+        }
+        .section-head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .section-sub {
+            color: #6e6e73;
+            font-size: 15px;
+            margin-top: 6px;
+        }
+        .more-link {
+            color: #b6002e;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        .more-link:hover {
+            text-decoration: underline;
+        }
+        /* brand strip */
+        .brand-strip {
+            background: white;
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e5ea;
+            margin-bottom: 40px;
+        }
+        .brand-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+        .brand-item {
+            font-size: 18px;
+            font-weight: 600;
+            color: #3a3a3c;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        .brand-item:hover {
+            opacity: 1;
+        }
+        /* categories */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .category-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            transition: box-shadow 0.2s, transform 0.2s;
+            border: 1px solid #f0f0f2;
+        }
+        .category-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            transform: translateY(-4px);
+        }
+        .category-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+        .category-card h3 {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+        .category-card p {
+            font-size: 14px;
+            color: #6e6e73;
+        }
+        /* product cards */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #efeff1;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .product-img {
+            background: linear-gradient(145deg, #f5f5f7, #e3e3e8);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+        .product-body {
+            padding: 20px;
+        }
+        .product-tag {
+            display: inline-block;
+            background: #fce8e8;
+            color: #b6002e;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        .product-body h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .product-desc {
+            font-size: 14px;
+            color: #6e6e73;
+            margin-bottom: 12px;
+        }
+        .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1d1d1f;
+        }
+        .price-old {
+            font-size: 14px;
+            color: #8e8e93;
+            text-decoration: line-through;
+            margin-left: 8px;
+            font-weight: 400;
+        }
+        /* ranking list */
+        .ranking-wrapper {
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
+        }
+        .ranking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            padding: 14px 10px;
+            border-radius: 12px;
+            transition: background 0.2s;
+        }
+        .ranking-item:hover {
+            background: #f8f8fa;
+        }
+        .rank-num {
+            font-size: 22px;
+            font-weight: 800;
+            width: 50px;
+            color: #c7c7cc;
+        }
+        .ranking-item:nth-child(1) .rank-num { color: #b6002e; }
+        .ranking-item:nth-child(2) .rank-num { color: #e06b3d; }
+        .ranking-item:nth-child(3) .rank-num { color: #d4a017; }
+        .rank-name {
+            flex: 1;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        .rank-type {
+            color: #8e8e93;
+            font-size: 14px;
+            margin-right: 20px;
+        }
+        .rank-score {
+            background: #f0f0f5;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        /* guide section */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        .guide-card {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+        }
+        .guide-card h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .guide-card ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+            font-size: 15px;
+            color: #3a3a3c;
+        }
+        .guide-card ul li::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: #b6002e;
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+        /* faq */
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin-bottom: 12px;
+            border: 1px solid #eef0f2;
+        }
+        .faq-item h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .faq-item p {
+            color: #4a4a4e;
+            font-size: 15px;
+        }
+        /* cta */
+        .cta-banner {
+            background: linear-gradient(120deg, #b6002e, #e03456);
+            border-radius: 28px;
+            padding: 50px 40px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .cta-banner h2 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .cta-banner p {
+            opacity: 0.9;
+        }
+        .btn-white {
+            background: white;
+            color: #b6002e;
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-white:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        /* footer */
+        .site-footer {
+            background: #1d1d1f;
+            color: #a5a5af;
+            padding: 50px 0 30px;
+            margin-top: 70px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            color: white;
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+        .footer-col a {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover {
+            color: white;
+        }
+        .footer-bottom {
+            border-top: 1px solid #3a3a3c;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 13px;
+        }
+        /* responsive */
+        @media (max-width: 992px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                padding: 50px 0 60px;
+            }
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .main-nav {
+                display: none;
+            }
+        }
+        @media (max-width: 576px) {
+            .header-inner {
+                height: 56px;
+            }
+            .header-search {
+                display: none;
+            }
+            .hero-copy h1 {
+                font-size: 32px;
+            }
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .brand-list {
+                justify-content: center;
+            }
+            .cta-banner {
+                padding: 30px 20px;
+            }
+            .section-title {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="logo">名牌<span>运动鞋</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">热门品牌</a></li>
+                    <li><a href="#">经典系列</a></li>
+                    <li><a href="#">选购指南</a></li>
+                    <li><a href="#">新品快讯</a></li>
+                </ul>
+            </nav>
+            <div class="header-search">
+                <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input type="text" placeholder="搜索鞋款或品牌">
+            </div>
+        </div>
+    </header>
+
+    <!-- hero -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-copy">
+                <h1>找到你的 <span>王牌战靴</span><br>不负每一步</h1>
+                <p>从经典复刻到前沿科技，从专业赛场到街头潮流。为你梳理名牌运动鞋的核心品牌、热门系列与实用选购思路，让选择更简单。</p>
+                <div class="hero-buttons">
+                    <a href="#hot" class="btn-primary">浏览热门鞋款</a>
+                    <a href="#guide" class="btn-outline">查看选购指南</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-sneaker-grid">
+                    <div class="mini-card">
+                        <div class="shoe-icon">👟</div>
+                        <p>Air Max 270</p>
+                        <span>Nike</span>
+                    </div>
+                    <div class="mini-card">
+                        <div class="shoe-icon">👟</div>
+                        <p>Ultraboost 22</p>
+                        <span>Adidas</span>
+                    </div>
+                    <div class="mini-card">
+                        <div class="shoe-icon">👟</div>
+                        <p>WOW 10</p>
+                        <span>李宁</span>
+                    </div>
+                    <div class="mini-card">
+                        <div class="shoe-icon">👟</div>
+                        <p>980</p>
+                        <span>New Balance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- brand strip -->
+    <div class="brand-strip">
+        <div class="container">
+            <div class="brand-list">
+                <span class="brand-item">NIKE</span>
+                <span class="brand-item">adidas</span>
+                <span class="brand-item">LI-NING</span>
+                <span class="brand-item">New Balance</span>
+                <span class="brand-item">ASICS</span>
+                <span class="brand-item">安踏</span>
+                <span class="brand-item">PUMA</span>
+                <span class="brand-item">Saucony</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- category section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <h2 class="section-title">按场景选运动鞋</h2>
+                    <p class="section-sub">不同运动场景需要不同的鞋款支撑</p>
+                </div>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon">🏃</div>
+                    <h3>跑步训练</h3>
+                    <p>缓震与回弹并重，适合日常慢跑与长距离训练。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🏀</div>
+                    <h3>篮球实战</h3>
+                    <p>强调包裹、抗扭转与抓地力，应对激烈对抗。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🧗</div>
+                    <h3>户外越野</h3>
+                    <p>防滑耐磨，适应复杂地形，提供稳定保护。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🛹</div>
+                    <h3>休闲潮流</h3>
+                    <p>经典轮廓与时尚配色，日常穿搭的百搭之选。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- hot products -->
+    <section class="section" id="hot" style="background: white;">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <h2 class="section-title">热门推荐鞋款</h2>
+                    <p class="section-sub">近期关注度较高的品牌系列</p>
+                </div>
+                <a href="#" class="more-link">查看全部 →</a>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">👟</div>
+                    <div class="product-body">
+                        <span class="product-tag">Nike</span>
+                        <h3>Air Jordan 1 Retro High OG</h3>
+                        <p class="product-desc">经典篮球鞋街头化代表，配色丰富，收藏价值高。</p>
+                        <div class="product-price">¥1,299 <span class="price-old">¥1,499</span></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">👟</div>
+                    <div class="product-body">
+                        <span class="product-tag">Adidas</span>
+                        <h3>Ultraboost Light</h3>
+                        <p class="product-desc">BOOST中底升级版本，日常跑步与压马路皆宜。</p>
+                        <div class="product-price">¥1,199</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">👟</div>
+                    <div class="product-body">
+                        <span class="product-tag">李宁</span>
+                        <h3>韦德之道 10</h3>
+                        <p class="product-desc">国产实战篮球鞋标杆，碳板加持，启动迅猛。</p>
+                        <div class="product-price">¥1,099</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ranking -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <h2 class="section-title">口碑排行榜</h2>
+                    <p class="section-sub">综合用户反馈与市场热度整理</p>
+                </div>
+            </div>
+            <div class="ranking-wrapper">
+                <div class="ranking-list">
+                    <div class="ranking-item">
+                        <span class="rank-num">01</span>
+                        <span class="rank-name">Nike Air Zoom Pegasus 40</span>
+                        <span class="rank-type">跑步鞋</span>
+                        <span class="rank-score">9.2分</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank-num">02</span>
+                        <span class="rank-name">Adidas Harden Vol. 7</span>
+                        <span class="rank-type">篮球鞋</span>
+                        <span class="rank-score">9.0分</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank-num">03</span>
+                        <span class="rank-name">New Balance 1080 v12</span>
+                        <span class="rank-type">跑步鞋</span>
+                        <span class="rank-score">8.9分</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank-num">04</span>
+                        <span class="rank-name">ASICS Gel-Kayano 29</span>
+                        <span class="rank-type">支撑跑鞋</span>
+                        <span class="rank-score">8.8分</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank-num">05</span>
+                        <span class="rank-name">安踏 KT9</span>
+                        <span class="rank-type">篮球鞋</span>
+                        <span class="rank-score">8.6分</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- guide -->
+    <section class="section" id="guide" style="background: white;">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <h2 class="section-title">选购指南</h2>
+                    <p class="section-sub">从脚型到用途，帮你理清思路</p>
+                </div>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <h3>📌 确定你的主要场景</h3>
+                    <ul>
+                        <li>日常慢跑建议选择缓震跑鞋，如Pegasus、Ultraboost系列。</li>
+                        <li>室内篮球需要高帮保护和强抓地力，留意鞋面支撑。</li>
+                        <li>通勤穿搭可以偏重颜值与舒适度，板鞋或复古跑鞋都不错。</li>
+                    </ul>
+                </div>
+                <div class="guide-card">
+                    <h3>📏 了解自己的脚型</h3>
+                    <ul>
+                        <li>扁平足或低足弓适合稳定支撑型鞋款。</li>
+                        <li>高足弓建议选择缓震性能更好的中性鞋。</li>
+                        <li>试穿时预留半码空间，避免顶脚或磨脚。</li>
+                    </ul>
+                </div>
+                <div class="guide-card">
+                    <h3>💡 关注科技与材料</h3>
+                    <ul>
+                        <li>中底材质决定脚感：Nike的ZoomX、Adidas的BOOST、李宁的䨻科技。</li>
+                        <li>鞋面工程网布或编织材料更透气贴合。</li>
+                        <li>外底橡胶纹路影响防滑，耐磨性也需考虑。</li>
+                    </ul>
+                </div>
+                <div class="guide-card">
+                    <h3>🛒 购买渠道与时机</h3>
+                    <ul>
+                        <li>官方旗舰店和授权专柜品质更有保障。</li>
+                        <li>大促节点（618、双11）通常有不错折扣。</li>
+                        <li>限量款留意官方发售通知，避免高价入手。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <h2 class="section-title">常见问题</h2>
+                    <p class="section-sub">关于名牌运动鞋你可能想问的</p>
+                </div>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Q1：名牌运动鞋和普通运动鞋差别大吗？</h3>
+                    <p>品牌运动鞋通常在研发投入、材料选择、品控方面有更严格的标准，在缓震、支撑等性能上表现更稳定。但具体差异需要结合鞋款定位和你的使用场景来判断。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Q2：如何辨别运动鞋真假？</h3>
+                    <p>优先选择官方渠道或信誉良好的授权经销商。收到后可以检查鞋盒标签、鞋标做工、鞋垫胶水痕迹等细节，部分品牌支持扫码验证。对于热门爆款，建议不要轻信明显低于市场价的产品。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Q3：一双运动鞋能穿多久？</h3>
+                    <p>这与使用频率、运动强度及鞋款材料有关。跑步鞋通常建议在累计使用500-800公里后更换，篮球鞋如果出现明显磨损或缓震衰减也需要更新。日常穿着可以适当延长。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Q4：需要买大半码吗？</h3>
+                    <p>不同品牌甚至不同型号的尺码会有差异。跑步鞋建议脚趾前留出一指左右空间，篮球鞋建议试穿后确认包裹感。线上购买时参考尺码表并留意用户评价。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- cta -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-banner">
+                <div>
+                    <h2>犹豫不决？</h2>
+                    <p>根据你的运动习惯和预算，找到最合适的鞋款</p>
+                </div>
+                <a href="#" class="btn-white">获取专属推荐</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>品牌品牌</h4>
+                    <a href="#">Nike 耐克</a>
+                    <a href="#">Adidas 阿迪达斯</a>
+                    <a href="#">李宁</a>
+                    <a href="#">安踏</a>
+                </div>
+                <div class="footer-col">
+                    <h4>热门系列</h4>
+                    <a href="#">Air Jordan</a>
+                    <a href="#">Ultraboost</a>
+                    <a href="#">韦德之道</a>
+                    <a href="#">Kayano</a>
+                </div>
+                <div class="footer-col">
+                    <h4>选购帮助</h4>
+                    <a href="#">尺码对照</a>
+                    <a href="#">真假鉴别</a>
+                    <a href="#">清洁保养</a>
+                    <a href="#">退换政策</a>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <a href="#">网站介绍</a>
+                    <a href="#">联系合作</a>
+                    <a href="#">隐私声明</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 名牌运动鞋指南 · 信息仅供参考</span>
+                <span>热爱运动，理性消费</span>
+            </div>
+        </div>
+    </footer>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+                  </html>
